@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Profil</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        /*dropdown menu*/
+        /*
+        nav {
+            margin: auto;
+            text-align: center;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav ul {
+            background: #752BEA;
+            padding: 0 20px;
+            list-style: none;
+            position: relative;
+            display: inline-table;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        nav ul::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        nav ul ul {
+            display: none;
+            background: #752BEA;
+            border-radius: 0px;
+            padding: 0;
+            position: 0;
+            position: absolute;
+            top: 100%;
+        }
+
+        nav ul li {
+            float: right;
+        }
+
+        nav ul li:hover {
+            background: #341f56;
+        }
+
+        nav ul li:hover>ul {
+            display: block;
+            width: 150px;
+        }
+
+        nav ul li:hover a {
+            color: #ffffff;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 25px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul ul li {
+            float: none;
+            border-top: 1px solid #3b1874;
+            border-bottom: 1px solid #6e48ab;
+            position: relative;
+        }
+
+        nav ul ul li a {
+            padding: 15px 40px;
+            color: #fff;
+        }
+
+        nav ul ul li a:hover {
+            background-color: #37146f;
+        }
+
+        nav ul ul ul {
+            position: absolute;
+            right: 100%;
+            top: 0;
+        }
+        */
+        /*dropdown menu*/
+        /*MAIN*/
+        body {
+            margin-top: 20px;
+            width: 100%;
+            background: lightgray;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .main {
+            padding: 15px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .topbar {
+            background-color: #4f63a5;
+            overflow: hidden;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .topbar button {
+            width: 25%;
+            margin: 5px;
+        }
+
+        .main-button a {
+            font-family: 'Raleway', sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            position: relative;
+            background: none;
+            color: rosybrown;
+            border: 0.2em solid rosybrown;
+            padding: 0.5em 1em;
+            transition: all .4 ease;
+        }
+
+        .main-button:hover {
+            transform: scale(1.2);
+        }
+
+        .topbar a {
+            float: left;
+            color: whitesmoke;
+            text-align: center;
+            padding: 20px 26px;
+            text-decoration: none;
+            font-size: 26px;
+            border-radius: 20px;
+        }
+
+        .card-body {
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 2px;
+            font-size: 20px;
+        }
+
+        .card-body img {
+            border-radius: 15px;
+        }
+        .card-body h5 {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .sidebar {
+            background-color: #333;
+            color: white;
+            height: 100%;
+        }
+
+        .sidebar a {
+            margin-left: 10px;
+            display: block;
+            color: white;
+            padding: 5px 5px 5px 5px;
+            font-size: 30px;
+            text-decoration: none;
+            background-color: black;
+            margin: 20px;
+            border-radius: 21px;
+            box-shadow: 0px 1px 8px #000000;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .sidebar a :hover {
+            box-shadow: 0px 1px 8px #000000;
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .content {
+            background-color: whitesmoke;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            padding: 10px 0 0 30px;
+        }
+
+        .container-fluid {
+            font-family: monospace;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mt-3 li {
+            margin: 60px;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .mt-3 h1 {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /*MAIN*/
+        /*RESPONSIVE NAVBAR*/
+        nav {
+            background: #7049af;
+            border-radius: 5px;
+            height: 80px;
+            width: 100%;
+        }
+
+        label.logo {
+            color: white;
+            font-size: 35px;
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            text-transform: uppercase;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+
+        a.active,
+        a:hover {
+            background: #a065ff;
+            transition: .5s;
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        .profile-btn li a {
+            visibility: hidden;
+            transition: all 0s;
+        }
+        @media (max-width : 952px) {
+            label.logo {
+                font-size: 30px;
+                padding-left: 50px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            .mt-3 li {
+                display: none;
+                left: -100%;
+            }
+
+            .profile-btn li a {
+                display: flexbox;
+                visibility: visible;
+                transition: all .5s;
+            }
+            .card-body {
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 2px;
+            font-size: 22px;
+            }
+
+            .card-body img {
+                border-radius: 15px;
+            }
+            .card-body h5 {
+                font-weight: bold;
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width : 858px) {
+            .checkbtn {
+                display: block;
+            }
+
+            ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #31175a;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+            }
+
+            a:hover,
+            a.active {
+                background: none;
+                color: #b180ff;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+
+            .mt-3 li {
+                left: -100%;
+            }
+
+            .profile-btn li a {
+                display: flexbox;
+                visibility: visible;
+                transition: all .5s;
+            }
+            .card-body {
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 2px;
+            font-size: 22px;
+            }
+
+            .card-body img {
+                border-radius: 15px;
+            }
+            .card-body h5 {
+                font-weight: bold;
+                font-size: 30px;
+            }
+        }
+
+        /*RESPONSIVE NAVBAR*/
+        @media (min-width: 858px) {
+            .body {
+                width: 50%;
+                display: grid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">SI3</label>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a class="active" href="profile.html">Profil</a></li>
+                <li><a href="#" onclick="return confirm ('Apakah Anda Yakin ?')">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="col-md-4 mt-1">
+                <div class="card text-center sidebar">
+                    <div class="card-body">
+                        <img src="#" class="rounded-cicle" width="150">
+                        <div class="fw-bold">
+                            <div class="mt-3">
+                                <h1>nama panjang</h1>
+                                <li>NIM</li>
+                                <li>MAHASISWA</li>
+                                <li>Program Studi Teknologi Informasi</li>
+                                <li>Fakultas Teknik</li>
+                                <li>IPK : </li>
+                            </div>
+                            <div class="profile-btn">
+                                <li><a href="home.html">Home</a></li>
+                                <li><a class="active" href="profile.html">Profil</a></li>
+                                <li><a href="#" onclick="return confirm ('Apakah Anda Yakin ?')">Logout</a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 mt-1">
+                <div class="card mb-3 content">
+                    <h1 class="m-3 pt-3" style="font-size: 50px;">PROFIL</h1>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Nama</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                Nama Panjang
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>NIM</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                nim
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Agama</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                agama
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Angkatan</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                tahun
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Email</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                abc@gmail.com
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Alamat</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                Jalan apa, No.4, xyz
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Tempat Lahir</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                lokasi
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Tanggal Lahir</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                tanggal
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Nomor HP</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                01234567890
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Golongan Darah</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                gol darah
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Jenis Kelamin</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                lk/pr
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Asal Sekolah</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                sma/smk
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>IP Terakhir</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                ip
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Dosen PA</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                Nama
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Organisasi Mahasiswa</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                organisasi
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>UKM</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                ukm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    </div>
+
+    <!--
+    <div class="container-fluid">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Input</a>
+                    <ul>
+                        <li><a href="#">Bio</a></li>
+                        <li><a href="#">Details</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Lainnya</a>
+                    <ul>
+                        <li><a href="#">Bio</a></li>
+                        <li><a href="#">Details</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="return confirm ('Apakah Anda Yakin ?')">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    -->
+
+</body>
+
+</html>
